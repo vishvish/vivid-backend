@@ -1,0 +1,50 @@
+{
+  "displayField":"title",
+  "segmentField":"slug",
+  "urlFields":[
+
+  ],
+  "container":false,
+  "version":"2.0",
+  "description":"<%= @name %> articles",
+  "name":"<%= @name %>",
+  "fields":[
+    {
+      "name":"title",
+      "label":"",
+      "required":true,
+      "type":"string"
+    },
+    {
+      "name":"slug",
+      "label":"",
+      "required":false,
+      "type":"string"
+    },
+    {
+      "name":"chapters",
+      "label":"",
+      "required":false,
+      "listType":"string",
+      "type":"list"
+    },
+    {
+      "name":"images",
+      "label":"",
+      "required":false,
+      "listType":"node",
+      "type":"list",
+      "allow":[
+        "binary_content"
+      ]
+    }
+  ],
+  "permissions":{
+    "create":true,
+    "read":true,
+    "update":true,
+    "delete":true,
+    "publish":true,
+    "readPublished":true
+  }
+}
