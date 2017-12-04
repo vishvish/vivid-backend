@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby backoffice integration app for Gentics Mesh CMS API. Ensure you have the Mesh CMS running somewhere in a terminal. Obtain here: https://getmesh.io/Download and run with Java.
 
-Things you may want to cover:
+Thor tasks added:
 
-* Ruby version
+Create a schema for longform-style articles
 
-* System dependencies
+`thor mesh:schema hello lib/mesh/schemas/longform.json.erb`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This task calls the Mesh API to get an Auth token and then reads a JSON File/ERB template and POSTs it to the `/schemas` endpoint.
