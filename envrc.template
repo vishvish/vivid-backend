@@ -1,1 +1,3 @@
 export MESH_HOSTNAME="http://localhost:8080/api/v1/"
+export MESH_USERNAME=admin
+export MESH_PASSWORD=admin

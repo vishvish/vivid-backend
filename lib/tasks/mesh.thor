@@ -7,15 +7,18 @@ class Mesh < Thor
 
   def initialize(*args)
     super
+    auth_body = {"username"=>"#{ENV['MESH_USERNAME']}", "password"=>"#{ENV['MESH_PASSWORD']}"}
+
     @@api = Hyperclient.new(ENV['MESH_HOSTNAME']) do |client|
       client.connection(ssl: { verify: false }) do |conn|
         @@token = conn.post do |req|
           req.url 'auth/login'
           req.headers['Content-Type'] = 'application/json'
-          req.body = '{ "username": "admin", "password": "admin" }'
+          req.body = auth_body.to_json
         end.body['token']
       end
     end
+    @@api._response.status
   end
 
   desc "example", "an example task"

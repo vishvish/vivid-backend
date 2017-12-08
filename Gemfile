@@ -60,5 +60,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # app-specific gems here
 gem 'pry-rails', :group => :development
-gem 'hyperclient'
 gem 'thor'
+group :development do
+  gem 'guard'
+  gem 'guard-minitest'
+end
+gem 'simplecov', :require => false, :group => :test
+gem 'rest-client'
+
+
+
