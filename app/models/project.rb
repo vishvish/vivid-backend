@@ -24,21 +24,25 @@ class Project
     end
   end
 
-  def self.list
-    response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects")
+  def self.all
+    response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects", { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
     list = JSON.parse(response.body)['data']
     list.collect! { |project| Project.new(project) }
   end
 
   def self.find(uuid)
     begin
-      response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects/#{uuid}")
+      response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects/#{uuid}", { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
     rescue RestClient::NotFound => e
       raise ProjectError, "Project not found"
     else
       hash = JSON.parse(response.body)
       Project.new(hash)
     end
+  end
+
+  def edit
+
   end
 
   def save
@@ -49,6 +53,8 @@ class Project
       raise ProjectError, "Project not found"
     rescue RestClient::Conflict => e
       return e.message
+    rescue RestClient::BadRequest => e
+      binding.pry
     else
       return response.body
     end
