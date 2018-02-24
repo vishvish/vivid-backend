@@ -1,7 +1,7 @@
 require 'pry'
 require 'hyperclient'
 require 'erb'
-
+require './config/environment'
 
 class Mesh < Thor
 
@@ -28,16 +28,23 @@ class Mesh < Thor
 
   desc "schema FILE", "creates a schema from the JSON file"
   def schema(name, file)
-    @name = "#{name}_#{Time.now.to_i}"
+    @name = "#{name}"
+    @description = "#{name}_#{Time.now.to_i}"
     @template = File.read(file)
 
+    # create schema in API
     @@api.connection.post do |req|
       req.url 'schemas'
       req.headers['Content-Type'] = 'application/json'
       req.headers['Authorization'] = "Bearer #{@@token}"
       req.body = ERB.new(@template).result( binding )
     end
+    
+    mh = MeshHelpers.new
+    permissions = {"permissions"=>{"create"=>false, "read"=>true, "update"=>false, "delete"=>false, "publish"=>false, "readPublished"=>false}}
+    response = mh.set_permissions_for_role_on_schema('anonymous', name, permissions)
   rescue Exception => e
     puts e.message
   end
+
 end
