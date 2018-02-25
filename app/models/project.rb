@@ -60,6 +60,19 @@ class Project
     end
   end
 
+  def destroy
+    begin
+      response = RestClient.delete("#{ENV['MESH_HOSTNAME']}/projects/#{self.uuid}", { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
+    rescue RestClient::NotFound => e
+      raise ProjectError, "Project not found"
+    rescue RestClient::Conflict => e
+      return e.message
+    rescue RestClient::BadRequest => e
+      binding.pry
+    else
+      return response.body
+    end
+  end
 end
 
 class ProjectError < StandardError
