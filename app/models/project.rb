@@ -52,7 +52,7 @@ class Project
     rescue RestClient::NotFound => e
       raise ProjectError, "Project not found"
     rescue RestClient::Conflict => e
-      return e.message
+      raise ProjectError, "Project name conflict"
     rescue RestClient::BadRequest => e
       binding.pry
     else
