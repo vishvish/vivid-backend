@@ -2,7 +2,7 @@ class Schema < ActiveResource::Base
   include ActiveModel::Model
   include ActiveModel::Serialization
   include ActiveModel::Serializers::JSON
-  attr_accessor :uuid, :creator, :created, :editor, :edited, :name, :displayField, :segmentField, :container, :version, :permissions, :fields, :urlFields, :description, :schema
+  attr_accessor :uuid, :creator, :created, :editor, :edited, :name, :displayField, :segmentField, :container, :version, :permissions, :fields, :urlFields, :description
 
   def attributes
     {
@@ -17,8 +17,7 @@ class Schema < ActiveResource::Base
       'permissions' => nil,
       'fields' => nil,
       'urlFields' => nil,
-      'description' => nil,
-      'schema' => nil
+      'description' => nil
     }
   end
 

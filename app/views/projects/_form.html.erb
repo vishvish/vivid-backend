@@ -10,13 +10,8 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <input type="name" class="form-control" name="project[name]" id="project_name" aria-describedby="nameHelp" placeholder="Enter Project Name">
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 <% end %>
