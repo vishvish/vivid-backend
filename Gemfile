@@ -22,6 +22,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'selenium-webdriver'
   gem 'simplecov', :require => false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
