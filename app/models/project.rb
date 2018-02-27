@@ -3,6 +3,7 @@ class Project
   include ActiveModel::Serialization
   include ActiveModel::Serializers::JSON
   attr_accessor :uuid, :creator, :created, :editor, :edited, :name, :rootNode, :permissions, :schema
+  validates_presence_of :name
 
   def attributes
     {
@@ -54,9 +55,8 @@ class Project
     rescue RestClient::Conflict => e
       raise ProjectError, "Project name conflict"
     rescue RestClient::BadRequest => e
-      binding.pry
     else
-      return response.body
+      Project.new(JSON.parse(response.body))
     end
   end
 
@@ -68,7 +68,6 @@ class Project
     rescue RestClient::Conflict => e
       return e.message
     rescue RestClient::BadRequest => e
-      binding.pry
     else
       return response.body
     end

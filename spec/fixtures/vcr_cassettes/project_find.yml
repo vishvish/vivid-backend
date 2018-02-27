@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/projects/217f8c981ada4642bf8c981adaa642c3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - W/"48aac3a2"
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5Njg4MTY2LCJleHAiOjE1MjMyODgxNjZ9.fUX_KSqwsESGQYcST1AbeE-UMKpdsBDYQ2UIAzR3R8c;
+        Max-Age=3600000; Expires=Mon, 9 Apr 2018 15:36:06 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '278'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKSQwW6DMBBE7/kK5HMjYePYDh8R9dBTbmvvolBBjAycIv69JhCgpVIPPb7x7MyuH4ckYX1fIkvyhAmuC+POhgOCVFLYhSCSy9jbaHeBoPNhnHhE3gbQyShuQSh75tIKvhJE4sCif1hDaK5NuT5ycUz1B09zoXKZXacqwvLfTWPGn0V3qOlpQar9JAXvu4tH2rQ3wX+S6y4783YzZUyhLQEZFDKNX7gQRBL0GmjdjWpY07dbFL5CCrPzW3gmFRYnrhwV0mg0C2WRtGLPiWE5vqFQl21b+nu7uWP6/FHoQk/zPlHDH1Lf4N6HVNFObHpble3tl8j36YWW7HG3w/AFAAD//wMA/SOwVHkCAAA=
+    http_version: 
+  recorded_at: Mon, 26 Feb 2018 23:36:06 GMT
+recorded_with: VCR 4.0.0
