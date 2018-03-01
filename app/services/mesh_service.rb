@@ -6,7 +6,7 @@ class MeshService
     u = use_env ? ENV['MESH_USERNAME'] : username
     p = use_env ? ENV['MESH_PASSWORD'] : password
     payload = {"username"=>"#{u}", "password"=>"#{p}"}
-    url = ENV['MESH_HOSTNAME'] + 'auth/login'
+    url = ENV['MESH_HOSTNAME'] + '/auth/login'
     begin
       response = RestClient.post(url, payload.to_json, headers={ content_type: 'application/json'})
       @@token = JSON.parse(response.body)['token']

@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/auth/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"admin","password":"admin"}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '39'
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5OTM3OTcyLCJleHAiOjE1MjM1Mzc5NzJ9.k2nh7tTElBAeYRSYWXKIyZjN9i0OWiCqwcrghmM2Hls;
+        Max-Age=3600000; Expires=Thu, 12 Apr 2018 12:59:32 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '213'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAABTNy46CMBSA4b1PQXgAQ1FmojsHy3jQtlHLpe5mmmY4BbwnUozvLrP8kz/5niPP8++n2hx9b+75xqWBKRcoMF3nZIubOK1+v/V/Q9YD4ZjOxsNEdJi7vMzPhxg+oM2IWKpOtdTxFiImd8gsnXKboJIQKlt3qgDHZFIBPvCnSAKwp45LGgnJJkJqN0CNWQ2wpYRZRlivI94PWB0eq8+7pM3XwqjdXhXlGtzB8hkGosD48tDXv6pl4aq5+aPXGwAA//8DABMRw6nPAAAA
+    http_version: 
+  recorded_at: Thu, 01 Mar 2018 20:59:32 GMT
+recorded_with: VCR 4.0.0

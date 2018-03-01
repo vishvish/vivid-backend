@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/auth/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"","password":""}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '29'
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '97'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKrmUlBQKijKL0gtKslMLVZSsFKoVqjVAYmWVBakgvhK6al5qUWZyfGpRUX5RUpgudzU4uLEdIi0T356Zp5CWmJmTmqKnhJXLQAAAP//AwBaupWuUwAAAA==
+    http_version: 
+  recorded_at: Thu, 01 Mar 2018 20:55:32 GMT
+recorded_with: VCR 4.0.0
