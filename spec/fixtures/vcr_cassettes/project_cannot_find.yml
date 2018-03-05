@@ -16,7 +16,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc
       Host:
       - localhost:8080
   response:
@@ -27,8 +27,8 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Set-Cookie:
-      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5Njg4ODY2LCJleHAiOjE1MjMyODg4NjZ9.g4ALsfr4IWL7laDcYAdU6TpSRIlqQfEDmJApL5Uw-QA;
-        Max-Age=3600000; Expires=Mon, 9 Apr 2018 15:47:46 GMT; Path=/
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI4LCJleHAiOjE1MjM4NTEyMjh9.HNswnuvOvt5XAh8oJUazsWClrwQzl9pZoObUF7ufkoc;
+        Max-Age=3600000; Expires=Mon, 16 Apr 2018 04:00:28 GMT; Path=/
       Content-Encoding:
       - gzip
       Content-Length:
@@ -38,5 +38,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAAHSNwQrCMBBE7/2KYc8ieBN/Qu9WJE3WGrFJ2GyopfTfS+O5c5t5PGZuAPKnc7gZMQMrSyZccAf9dkJ4HDYpSUws6rkKM5a66pR469RzYPH2ySJRqLKBczb9H1+7D1vF6PWNUrxDu3vYEmwsX4cQFR3jFUtwR2qWFQAA//8DAAO3bHq8AAAA
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 23:47:46 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:28 GMT
 recorded_with: VCR 4.0.0

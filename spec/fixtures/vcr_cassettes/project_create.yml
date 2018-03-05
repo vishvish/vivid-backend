@@ -35,13 +35,13 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAAOxZ32/bNhB+z19B+HkpROq337YUAYIWQ7A4G7AhCCjxZAujJU2k0hlF//eSlm1JlpzInqx0aR/vjrqPPPKO31GfLxCaMCrpBE3RX+izEpWiKGKmFRMSUmI6JDAsTCw3tCqJKInRyU/lB2EOVKa5/qZ0UXcCtufggBIn8LEVEFxJVEmYTtZffKm7gg28gd1LTC4Nd4aNKXGmlv3nFhJYPBCi9tQDkMUi43R1HQMvByd0CVujgPkSElkZBS/mu+ikiaRxAuvZyryAjf4JchGnyXo8fmdsh6/9al2oAjFP89XWEGnvor5T9dG16Sg1pwHwtf7Xhj6Hf4o4L5dbTUUZ5Cor/QiZx8l8G6IOoNrSGkB3Df0AQAxEmMeZ1DHqwHvfZa7DRpSLl3DRwya4GeTLWOj9EI1DVZ7Htjulbq+tyFjnYAYcuvRZEfBYLLq935bGKoTljC9q0aqOfKBTkmDbYIFl+QbQnYSV5JIfmXooU+MlnUNnqta25MVcfYJFHHK4qTv7RvKVcjmDf2UX1s9cQp5QGT8Bao45No+6gOuRbcDeNA09sII4oaoQvq2cDTE4UWQ7kQHM8ohBd1KgJBKeP2e9S4NcYjzD/tR0p9g6e84eBGzlrIwl73e9Fjm/rmXaw4mpXL9t1mmTy9UjtrFnuq5nWq2M1/Z+mV5fSiMPRrmWh83pcEEzVTPEqUgqO+RsD609DT3qpcIyzBSSlMGhCezUlPP0U7m7m0r0qE+XOpET9PC2ahKh1DMpCcwwoJZBcSX5SmIwOo84f006CHg6498rSZMkDuE+V0f01OK0zzP6FZ7RmPp2fV10RpnQ/W8fhy1Do5GnTxDPF53c6Y89S49lJcUyUFt+GO3uw33nfsk0/Bt9AMjUZNF9Eg8Mm+Vqk7qAb5uGIbCEXguHJ+g8LeVKPzbNQ8CeqZdcyCV/BrWjK2jA/l7a0fGEuHlv1S+oBuZbu54c27OY4/lmEGIrMlklMS0ZY19Ppj/y9VQDPO562nRQA3Bmcpgz/7IGQRtyhES4gCVFhQCGZIpU6ueASvKGaMJQKheQo3JmSL9Cvmvdd3t060yd9anXUCOoDaxNJN7rp9WTG90uyEidxkL76AC9btn6IKYpB5q8td7atxzHVTWBub7l2+DtpFBJoTlSocBkRowpdqbEG6dQdAG+Um9tP9tb11lsvafuz24PttWzpmEAFvhc13vVsr1a93uzZxm5B37VnwVilaSZiDvjcteyfa+/CRzTclhkYyeEyPJc5u0kU0mu84M/9amKR/7Q269+1ylnivds2JEiRmWI0M6tQFGab9iRTk7R5kXR2se5ngHGa8u/p+RzAz+EAINtWJ5FjaiSsJLI6H/Tv6nk689J/uvD/lWzO9GpFvB0nqVCilaeHdV4jHbZnUJ9Ts1pCVTsKk0TbM8yBNFqhLvJs/ZNxz3P/D+LSDnryeMS9JGP0mrGk7DIcxWP2/UzzxThanlbFbG3OqW4SgtN1aqBMpWU77SeRrv48hUAAP//AwD8W6bbECQAAA==
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 00:22:51 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:28 GMT
 - request:
     method: post
     uri: http://localhost:8080/api/v1/projects
     body:
       encoding: UTF-8
-      string: '{"uuid":null,"name":"9dd4c3c4e7622408b52ed28463539fce","creator":null,"created":null,"editor":null,"edited":null,"rootNode":null,"permissions":null,"schema":{"name":"folder","uuid":"6346df516cef487d86df516cef387d76"}}'
+      string: '{"uuid":null,"name":"c11c0d8ed95ebf5a006672fde0280d9d","creator":null,"created":null,"editor":null,"edited":null,"rootNode":null,"permissions":null,"schema":{"name":"folder","uuid":"6346df516cef487d86df516cef387d76"}}'
     headers:
       Accept:
       - application/json
@@ -52,7 +52,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc
       Content-Length:
       - '217'
       Host:
@@ -63,14 +63,14 @@ http_interactions:
       message: Created
     headers:
       Location:
-      - http://localhost:8080/api/v1/projects/eb74b14689cd4969b4b14689cd0969c0
+      - http://localhost:8080/api/v1/projects/a1203cbd01814d35a03cbd01815d3546
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NjA0NTcxLCJleHAiOjE1MjMyMDQ1NzF9._711ciTEw0Pbz9wziLTtmeaD08Q0ARdDW7K2ben4qQU;
-        Max-Age=3600000; Expires=Sun, 8 Apr 2018 16:22:51 GMT; Path=/
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI4LCJleHAiOjE1MjM4NTEyMjh9.HNswnuvOvt5XAh8oJUazsWClrwQzl9pZoObUF7ufkoc;
+        Max-Age=3600000; Expires=Mon, 16 Apr 2018 04:00:29 GMT; Path=/
       Content-Encoding:
       - gzip
       Content-Length:
@@ -78,9 +78,9 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAKSRwW6DMAyG730KxHmVkuCEhIeodthptyQ2KlPboACnindfKAjYOmmadvyc379/O/dDluXD0GCeVVlOrgTHQWnjEYwybiWWyLP8ZZL7SLYPceq4J/5iILXizgrlDAcn+EY2Ebd50o+bCc1dgnF9ZOIo1BtjlRCV5O/zKMLm35Mmj18H3eyVHhKDCL7wQKUSAph2UhAKDaqQhak9zfIYQn8KSLtkbQwf5PvTn4z2G7HaWG6kFhIscAsbUaLl+Kmh82e62m3yPn0dLkhxUe7NVQEKa8mVpxp0iXqlIlGp8kfHuB6tpXhtuq4Jt2634/xpU6GPAy15Ug2/lYYWn3VIF3oqtoO7NN35B8vX+YVW7ynbYfwEAAD//wMAR7lejbECAAA=
+        H4sIAAAAAAAAAKSRwW6DMAyG730KxHmV4kBC4CGqHnbaLYkdlQkaFOBU8e4LpQO2TpqmHT/n9//bzu2QJOk41pgmVZJq4CyzBhkoyDETeiURKZfpyyy3gfTgw9xxi7w3IKEkGM2lKSE3HDbSkUCnUT9tJrR08ZhwZNmRiVfgFWMVV29LFGH976TZ49egq27pLrEAlqEiLAUZFy/ApCy4Q2JcMSxxkQfvh5NH2k3WBf9Odjj9yWi/kYTCaeEKiFfPi6w0K8FM/LOhtxdq9Za8n975Bik8lF/Ms1yiEyAtuVwVqFbKIhUyvXdM69E6Cm3d97W/9rsdl0+bC0MY6TFPrOG30tjhsw6poadiN5qm7i8/WJ6XF1q959kO0wcAAAD//wMAhDbjerECAAA=
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 00:22:51 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:29 GMT
 - request:
     method: get
     uri: http://localhost:8080/api/v1/schemas
@@ -116,13 +116,13 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAAOxZ32/bNhB+z19B+HkpROq337YUAYIWQ7A4G7AhCCjxZAujJU2k0hlF//eSlm1JlpzInqx0aR/vjrqPPPKO31GfLxCaMCrpBE3RX+izEpWiKGKmFRMSUmI6JDAsTCw3tCqJKInRyU/lB2EOVKa5/qZ0UXcCtufggBIn8LEVEFxJVEmYTtZffKm7gg28gd1LTC4Nd4aNKXGmlv3nFhJYPBCi9tQDkMUi43R1HQMvByd0CVujgPkSElkZBS/mu+ikiaRxAuvZyryAjf4JchGnyXo8fmdsh6/9al2oAjFP89XWEGnvor5T9dG16Sg1pwHwtf7Xhj6Hf4o4L5dbTUUZ5Cor/QiZx8l8G6IOoNrSGkB3Df0AQAxEmMeZ1DHqwHvfZa7DRpSLl3DRwya4GeTLWOj9EI1DVZ7Htjulbq+tyFjnYAYcuvRZEfBYLLq935bGKoTljC9q0aqOfKBTkmDbYIFl+QbQnYSV5JIfmXooU+MlnUNnqta25MVcfYJFHHK4qTv7RvKVcjmDf2UX1s9cQp5QGT8Bao45No+6gOuRbcDeNA09sII4oaoQvq2cDTE4UWQ7kQHM8ohBd1KgJBKeP2e9S4NcYjzD/tR0p9g6e84eBGzlrIwl73e9Fjm/rmXaw4mpXL9t1mmTy9UjtrFnuq5nWq2M1/Z+mV5fSiMPRrmWh83pcEEzVTPEqUgqO+RsD609DT3qpcIyzBSSlMGhCezUlPP0U7m7m0r0qE+XOpET9PC2ahKh1DMpCcwwoJZBcSX5SmIwOo84f006CHg6498rSZMkDuE+V0f01OK0zzP6FZ7RmPp2fV10RpnQ/W8fhy1Do5GnTxDPF53c6Y89S49lJcUyUFt+GO3uw33nfsk0/Bt9AMjUZNF9Eg8Mm+Vqk7qAb5uGIbCEXguHJ+g8LeVKPzbNQ8CeqZdcyCV/BrWjK2jA/l7a0fGEuHlv1S+oBuZbu54c27OY4/lmEGIrMlklMS0ZY19Ppj/y9VQDPO562nRQA3Bmcpgz/7IGQRtyhES4gCVFhQCGZIpU6ueASvKGaMJQKheQo3JmSL9Cvmvdd3t060yd9anXUCOoDaxNJN7rp9WTG90uyEidxkL76AC9btn6IKYpB5q8td7atxzHVTWBub7l2+DtpFBJoTlSocBkRowpdqbEG6dQdAG+Um9tP9tb11lsvafuz24PttWzpmEAFvhc13vVsr1a93uzZxm5B37VnwVilaSZiDvjcteyfa+/CRzTclhkYyeEyPJc5u0kU0mu84M/9amKR/7Q269+1ylnivds2JEiRmWI0M6tQFGab9iRTk7R5kXR2se5ngHGa8u/p+RzAz+EAINtWJ5FjaiSsJLI6H/Tv6nk689J/uvD/lWzO9GpFvB0nqVCilaeHdV4jHbZnUJ9Ts1pCVTsKk0TbM8yBNFqhLvJs/ZNxz3P/D+LSDnryeMS9JGP0mrGk7DIcxWP2/UzzxThanlbFbG3OqW4SgtN1aqBMpWU77SeRrv48hUAAP//AwD8W6bbECQAAA==
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 00:22:51 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:29 GMT
 - request:
     method: post
     uri: http://localhost:8080/api/v1/projects
     body:
       encoding: UTF-8
-      string: '{"uuid":null,"name":"9dd4c3c4e7622408b52ed28463539fce","creator":null,"created":null,"editor":null,"edited":null,"rootNode":null,"permissions":null,"schema":{"name":"folder","uuid":"6346df516cef487d86df516cef387d76"}}'
+      string: '{"uuid":null,"name":"c11c0d8ed95ebf5a006672fde0280d9d","creator":null,"created":null,"editor":null,"edited":null,"rootNode":null,"permissions":null,"schema":{"name":"folder","uuid":"6346df516cef487d86df516cef387d76"}}'
     headers:
       Accept:
       - application/json
@@ -133,7 +133,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc
       Content-Length:
       - '217'
       Host:
@@ -146,16 +146,16 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Set-Cookie:
-      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NjA0NTcxLCJleHAiOjE1MjMyMDQ1NzF9._711ciTEw0Pbz9wziLTtmeaD08Q0ARdDW7K2ben4qQU;
-        Max-Age=3600000; Expires=Sun, 8 Apr 2018 16:22:51 GMT; Path=/
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI5LCJleHAiOjE1MjM4NTEyMjl9.LFiH2SJsybHtJMgV6miGxG9giaZyejGdqD05wnkD4VI;
+        Max-Age=3600000; Expires=Mon, 16 Apr 2018 04:00:29 GMT; Path=/
       Content-Encoding:
       - gzip
       Content-Length:
-      - '185'
+      - '184'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAADyNywrCMBRE937F5a6L9JGmjR8h7kWkSW5rxKYlCaiU/rtpRJdnZpiz7ADQFK09da4bKZDzCAc4AwqtmaoUo4aXJctbWZeky5bxqq5ErwgzQJINkwXjrVCaCS7kn/JIKke4ZJtgdtNMLhhK5wusKQ3vmTZGG81XNdn+YVTA1I3kfTd862OswXj4LYwd4GnCDToL9DI+BVFxJxVg+9rjbv0AAAD//wMAjJED7tkAAAA=
+        H4sIAAAAAAAAADSNywrCMBRE9/2Ky10XSfoy9SPEvYikyW2N2LQkAZXSfzeNdHlmhjlLBoCGC3uRTo4UyHmEE1wBFeeKaUG6ranra8lY0xyLXhMrBNOtxhxQ8oKVqtOMC17pMo52qiNVDcIt3wSzm2ZywVA6X2BNafjOtDHaaL6ryfYvowKmbiTv5fCvz7EG42FfGDvA24QHSAv0MT4FUfEkFWD7OmC2/gAAAP//AwCG8z6n2QAAAA==
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 00:22:51 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:29 GMT
 recorded_with: VCR 4.0.0

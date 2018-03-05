@@ -26,14 +26,14 @@ class Project
   end
 
   def self.all
-    response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects", { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
+    response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects", { content_type: :json, accept: :json, :Authorization => "Bearer #{MeshService.token}" })
     list = JSON.parse(response.body)['data']
     list.collect! { |project| Project.new(project) }
   end
 
   def self.find(uuid)
     begin
-      response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects/#{uuid}", { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
+      response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects/#{uuid}", { content_type: :json, accept: :json, :Authorization => "Bearer #{MeshService.token}" })
     rescue RestClient::NotFound => e
       raise ProjectError, "Project not found"
     else
@@ -49,7 +49,7 @@ class Project
   def save
     self.schema = { 'name' => 'folder', 'uuid' => Schema.get_root_folder.uuid }
     begin
-      response = RestClient.post("#{ENV['MESH_HOSTNAME']}/projects", self.to_json, { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
+      response = RestClient.post("#{ENV['MESH_HOSTNAME']}/projects", self.to_json, { content_type: :json, accept: :json, :Authorization => "Bearer #{MeshService.token}" })
     rescue RestClient::NotFound => e
       raise ProjectError, "Project not found"
     rescue RestClient::Conflict => e
@@ -62,7 +62,7 @@ class Project
 
   def destroy
     begin
-      response = RestClient.delete("#{ENV['MESH_HOSTNAME']}/projects/#{self.uuid}", { content_type: :json, accept: :json, :Authorization => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM' })
+      response = RestClient.delete("#{ENV['MESH_HOSTNAME']}/projects/#{self.uuid}", { content_type: :json, accept: :json, :Authorization => "Bearer #{MeshService.token}" })
     rescue RestClient::NotFound => e
       raise ProjectError, "Project not found"
     rescue RestClient::Conflict => e

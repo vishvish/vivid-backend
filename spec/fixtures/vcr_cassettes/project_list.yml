@@ -1,22 +1,22 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:8080/api/v1/projects
+    method: post
+    uri: http://localhost:8080/api/v1/auth/login
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: '{"username":"admin","password":"admin"}'
     headers:
       Accept:
-      - application/json
+      - "*/*"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
       - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
       Content-Type:
       - application/json
-      Authorization:
-      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM
+      Content-Length:
+      - '39'
       Host:
       - localhost:8080
   response:
@@ -24,25 +24,23 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Etag:
-      - W/"c2addabb"
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NjA0NTcxLCJleHAiOjE1MjMyMDQ1NzF9._711ciTEw0Pbz9wziLTtmeaD08Q0ARdDW7K2ben4qQU;
-        Max-Age=3600000; Expires=Sun, 8 Apr 2018 16:22:51 GMT; Path=/
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc;
+        Max-Age=3600000; Expires=Mon, 16 Apr 2018 04:00:27 GMT; Path=/
       Content-Encoding:
       - gzip
       Content-Length:
-      - '507'
+      - '215'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAOyTT2/bMAzF7/kUhs8NYFHUH+e6e9FDTxuGgZKo1UMSB459KvLdJ9eL7KAZ1gBrTz2+F5JPpH95XhVFGainstgU34rnJJMxDE0YjVLFWqoYvPZOYm1hVlVSFsq7qcF3TH3bjT3TiOUQVlYLR6BdLdCBmBUlJah86TgtR/HUCZWw6wrWoB5BbhA2Unw9R3Jo/lPiOOkNgXva8VRkNVm05AQ7EhxMraONGBSQVmTduaFr2/6+DXzxxkPX/mLf3984bLkdSicMGOBgEaOiWVFSoOaWo3/iHS3zl3vEdhu4y9XLCC1Rh6iE9hzRmmCzkkkZXf7pOV0c8sDdrjkem3Z/vNh5+qSj1XcD59clN7wyh0O4Vht4y1fsw+C2zfHp6uiH6TfOGavzi093r0D36fI+EgK7dNSK6qxUUhw/GnTQHwz6IjADQhgRlSGqXJDCeJeuJACNwyhkwOom0N84bLkd1cDEDuq6IhTp75BVnZT3n6DfDjoIE62vraBAqBFcVpSUl+8PulkLWFfmUVQJug3Kdwf9r4EZkMC79iaYFw0XNFkbjUuU2gBYpdNmlaiPwJ/A/gvY4vtYWf7YcU/NPrbza0s/dB3v+wf6+ZIm5tXOFqizl4wv7bDvl4V929M2u3JMW51+AwAA//8DAD9sH1cACQAA
+        H4sIAAAAAAAAABTN0U7CMBSA4XueYtkDELqBZNwR7OTMnQ6xK5Q7nU3oqQMxE9oZ3t15+Sd/8v2Ooijuzs6c4mgRxSYUE7Nf2soWz4q92HJVHN+fmv+GugcmbJGNh4k1iQpqr74OK3iAtmbVo/a65UG0MEO5tUh8Kii3WkKiyXm9g4AyP4K92bddPgE6eyHhhlR7JEgH6NOsB5g4Q8KpkDwgfWTj8JoZ3bMEXEndut+YdK4OV/e9vTrHUyL/MzvNy0uKyyYe3f8AAAD//wMA5biS6s8AAAA=
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 00:22:51 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:27 GMT
 - request:
     method: get
     uri: http://localhost:8080/api/v1/projects
@@ -59,7 +57,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NTEwMTc4LCJleHAiOjE1MjMxMTAxNzh9.r7NKCufd38GbIYAkKpPkW2s1khRsrMGDi9f1KL-d5nM
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc
       Host:
       - localhost:8080
   response:
@@ -68,22 +66,65 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - W/"c2addabb"
+      - W/"8167784d"
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTE5NjA0NTcxLCJleHAiOjE1MjMyMDQ1NzF9._711ciTEw0Pbz9wziLTtmeaD08Q0ARdDW7K2ben4qQU;
-        Max-Age=3600000; Expires=Sun, 8 Apr 2018 16:22:51 GMT; Path=/
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc;
+        Max-Age=3600000; Expires=Mon, 16 Apr 2018 04:00:28 GMT; Path=/
       Content-Encoding:
       - gzip
       Content-Length:
-      - '507'
+      - '336'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAOyTT2/bMAzF7/kUhs8NYFHUH+e6e9FDTxuGgZKo1UMSB459KvLdJ9eL7KAZ1gBrTz2+F5JPpH95XhVFGainstgU34rnJJMxDE0YjVLFWqoYvPZOYm1hVlVSFsq7qcF3TH3bjT3TiOUQVlYLR6BdLdCBmBUlJah86TgtR/HUCZWw6wrWoB5BbhA2Unw9R3Jo/lPiOOkNgXva8VRkNVm05AQ7EhxMraONGBSQVmTduaFr2/6+DXzxxkPX/mLf3984bLkdSicMGOBgEaOiWVFSoOaWo3/iHS3zl3vEdhu4y9XLCC1Rh6iE9hzRmmCzkkkZXf7pOV0c8sDdrjkem3Z/vNh5+qSj1XcD59clN7wyh0O4Vht4y1fsw+C2zfHp6uiH6TfOGavzi093r0D36fI+EgK7dNSK6qxUUhw/GnTQHwz6IjADQhgRlSGqXJDCeJeuJACNwyhkwOom0N84bLkd1cDEDuq6IhTp75BVnZT3n6DfDjoIE62vraBAqBFcVpSUl+8PulkLWFfmUVQJug3Kdwf9r4EZkMC79iaYFw0XNFkbjUuU2gBYpdNmlaiPwJ/A/gvY4vtYWf7YcU/NPrbza0s/dB3v+wf6+ZIm5tXOFqizl4wv7bDvl4V929M2u3JMW51+AwAA//8DAD9sH1cACQAA
+        H4sIAAAAAAAAAKyRvW7DIBSF9zyFxdxIBhNMsnaPMnRqVVXXcN04so2FYYr87sVx/Kd66NDxfNxzzwHuuygiGhyQ6BR9RPcgA/C+0D0gjKa5VEdJQQMXnGWTgqBUQl4Gg7IIztjeM6xYLsGDFDQDJrIj5Rmjs4KgKJCHo1uuwmd8TNM9Zfs4faPxiYkTT97HSNTFPyX2m/4QWEOFjyGNlRmhNcadjcZVj8aaGyp33jAsWwop8zRDQKkZj8PTTgqCYjhbWnXFCpYZyz65KTXaaXoVkXCh8wMVCnMuUy0nlQSVCvL0dKsHadBWRdsWpm5X9xq+pkfOepzaBap/Qd/orVmNJW7gxmdl0V43V1+GM5wydmPjLvrsJ8lXhQ6KOjdzW6K8tVi7C3w/0uh8tRGxw8gCeDW+dstBZxyUM+3Tdt0PAAAA//8DAN6lwmYuAwAA
     http_version: 
-  recorded_at: Mon, 26 Feb 2018 00:22:51 GMT
+  recorded_at: Mon, 05 Mar 2018 12:00:28 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI3LCJleHAiOjE1MjM4NTEyMjd9.yS9eYz12IkLjtHzPe37VZvkrRvkkE3jjxu5n7Lq3MAc
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - W/"8167784d"
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIwMjUxMjI4LCJleHAiOjE1MjM4NTEyMjh9.HNswnuvOvt5XAh8oJUazsWClrwQzl9pZoObUF7ufkoc;
+        Max-Age=3600000; Expires=Mon, 16 Apr 2018 04:00:28 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '336'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKyRvW7DIBSF9zyFxdxIBhNMsnaPMnRqVVXXcN04so2FYYr87sVx/Kd66NDxfNxzzwHuuygiGhyQ6BR9RPcgA/C+0D0gjKa5VEdJQQMXnGWTgqBUQl4Gg7IIztjeM6xYLsGDFDQDJrIj5Rmjs4KgKJCHo1uuwmd8TNM9Zfs4faPxiYkTT97HSNTFPyX2m/4QWEOFjyGNlRmhNcadjcZVj8aaGyp33jAsWwop8zRDQKkZj8PTTgqCYjhbWnXFCpYZyz65KTXaaXoVkXCh8wMVCnMuUy0nlQSVCvL0dKsHadBWRdsWpm5X9xq+pkfOepzaBap/Qd/orVmNJW7gxmdl0V43V1+GM5wydmPjLvrsJ8lXhQ6KOjdzW6K8tVi7C3w/0uh8tRGxw8gCeDW+dstBZxyUM+3Tdt0PAAAA//8DAN6lwmYuAwAA
+    http_version: 
+  recorded_at: Mon, 05 Mar 2018 12:00:28 GMT
 recorded_with: VCR 4.0.0
