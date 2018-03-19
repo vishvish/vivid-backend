@@ -34,7 +34,7 @@ class Project
   def self.find(uuid)
     begin
       response = RestClient.get("#{ENV['MESH_HOSTNAME']}/projects/#{uuid}", { content_type: :json, accept: :json, :Authorization => "Bearer #{MeshService.token}" })
-    rescue RestClient::NotFound => e
+    rescue RestClient::NotFound
       raise ProjectError, "Project not found"
     else
       hash = JSON.parse(response.body)

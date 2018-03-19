@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @schema.name %>
+</p>
+
+<p>
+  <strong>Container:</strong>
+  <%= @schema.container %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @schema.description %>
+</p>
+
+<p>
+  <strong>Displayfield:</strong>
+  <%= @schema.displayField %>
+</p>
+
+<p>
+  <strong>Fields:</strong>
+  <pre><%= JSON.pretty_generate(@schema.fields) %></pre>
+</p>
+
+<p>
+  <strong>Segmentfield:</strong>
+  <%= @schema.segmentField %>
+</p>
+
+<p>
+  <strong>Urlfields:</strong>
+  <%= @schema.urlFields %>
+</p>
+
+<%= link_to 'Edit', edit_schema_path(@schema.uuid) %> |
+<%= link_to 'Back', schemas_path %>

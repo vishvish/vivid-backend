@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/auth/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"admin","password":"admin"}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '39'
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIxNDY4NDMyLCJleHAiOjE1MjUwNjg0MzJ9.uZVkm1363l3xEIawxqQmAuZPvAwOBTt-JprYNBb3v9Y;
+        Max-Age=3600000; Expires=Mon, 30 Apr 2018 06:07:12 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '212'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAABTNTQ/BMByA8btPsexOVkPCbbONf2mHdLXuNrLQTr0Fa4nvbo5P8iS/T8dx3Melrs6uM3HcymKvygOZSrzgaC2XU3zczfb/huwNiEo87rUT2ve55Tm/FlMYgc5QGgkjdGyphiFhG0lUPKAqkYJBX6jaiC1YwpIjyEaW28QDdTGUgaGRGNCI2BY6VfMWVjEiKmuoOnjk3WLPgtca+SP/5JsYysbc1jp4FqtX0KQhe3Tx9S5ouPNfY+F2vj8AAAD//wMAWipCOs8AAAA=
+    http_version: 
+  recorded_at: Mon, 19 Mar 2018 14:07:12 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/schemas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIxNDY4NDMyLCJleHAiOjE1MjUwNjg0MzJ9.uZVkm1363l3xEIawxqQmAuZPvAwOBTt-JprYNBb3v9Y
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Etag:
+      - W/"59342099"
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIxNDY4NDMyLCJleHAiOjE1MjUwNjg0MzJ9.uZVkm1363l3xEIawxqQmAuZPvAwOBTt-JprYNBb3v9Y;
+        Max-Age=3600000; Expires=Mon, 30 Apr 2018 06:07:12 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1599'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAOxb227bOBB971cIft4U4kWUqLfddLNNU2STxmnRLoqCEoe2sLLkleS0QdF/X8qybrYc2K6tpm4eD4fmIUfDmeGQ/vrMMAZSZGJguMY/xlcNdcNsFsi8YYBN4BwrhYEDdUxPVIhoJMngt+IHfgIii5P8N8UQzUHAchjyBGYeR9TDqEZCIyQG8198aw4FJT1yTkx8gukQY9fkLmYfSkqQwZ4Y85E2IJRBOg3F/VkAYdE5C7IQSmkKowlEWS1Nw9moFM6ScC5ICy1/LJcaR5kIIpivQokwhYXgDpI0iKP5OOi5Wc0AUj8Jplkpeh1HIxUnE0MkWeCHkJYdIzGBeY9w0QOXEtWYRqW3qntzRbo9FB6Ec0HdlsB/syAp1JUlM6gE2f20GCTNkiAalSruYGloZgOShl62YvHHYpppPe7KFAZpNlxiW51G3uuBSQQTMYL9TCGKJaybQNUswjD+XHzdgRdEIrn/lBuZNsyB8bGYZmV9U0gmQZrbWdraRcUGXPm+unX1o8+msquvhBA6mqczT0933Dn0VSGrDauY7bOGYhtuyReYMOyZFGFq+7RGWCMpDu+W7BOET0x7iEztIlxqHdwtrSVccUtz49vEK7XcT/1B1nmfemdpRYzi5H4zn9KYTmsDXLbaD+hWblrteyBquuEOvhdd4m092jHsUi/fjhhZpvQo5SaICiGNbPy0S9ft0nnY6NymG2QJlZ3ewTjPCs6bgz2SvSrCbAhfsi6u30MdtSORBXdgtPvsIytoarZFe94WbMBVxNcj2q8+AqaUxZQJkjrYFBXyNMJ+T8k+QkPEXWK7iPaT7HcRPr5kX+f495+QhRxi2w6hK7s9lz9l+U9Z/vH4I86ZbVEiMbGBEscUFUIaUdaLPyIniA8RdU3sIrsPf9RNuCenUpns1V+vXl5c//mmy2McgelgRYiHbU6oNh1FmddCvJ+6VfUlkYsPn3quJdy36Vy/f3t2+e7l7ZGaDlKMeCYTkilGHROJCgmNWA+1heM1nfcXl6/+vj2/PlLT8TllzFZESptTboFTIV8jvwevMz9/IjzEpouYi51+DrxdhD8ogbYeTKDz43BX4txs3zF3HrYFe0igH0ptT1dkPyzFPV+S9Jzo/tBKYHofxdM06NTLzYrsV6wBYhC2sDh1uO9Tx8c1YhrZssdoil3Ldi3eXzRdJjxQYWDFoem8xTS5soAroiwsMeZESYcC8+WRRl5JsGN5jFrEEZQ6lqgQ0Ujxp6Pi7knbxfvrm/MPb14cqekQ4NLnGBzbV9S3rBrZGjlOj6aDXGq5pJcnDt2EO9tIh8tRNgFZ+p0jtR0shEME9ojvCWoKVCOukYTD287ShdPhK+ZrCXe/h15yWIMo8OE20VnUd7uuxQ3YZql9b1ljub4OrkstMm7fvN5vkby3a73PEIzGnbd675YkGywrmk08/cnXs91c3HZ+ryz2/zUuAKZ6ssZtFOyZdproj9RFfNUW7IMrzdcSwh10Wkux0tdt8T5oD/TCYZxNwgdYO+6rW7RvC7mx/VVt+7DZPFW2OI/p8oRZDpXM4cTzEVVE1kjmyOw7NJHDH7zWEm4Xmhb3+nvIpvH6Q9sfcxJjUc0wUn8ME2HMUpBGFht62ydgFDUXQ0TSiLMxJEYxMyN/rvt8JdYt1Uc2CnnbB4ZdQ1BLqS2uhSZe5G+Qt6FsPb/oolTaGmf5GB2kZyuyTRjjOAQRHVF1xjRNySzKbMk8SizbqZCnEfTgJBpHEYz0QbbPs0+bcOcks3xjTbv23BEYCSOUSWUh5oOiji2dChGN7B6u4X/WSPIdj22X48VZHEodARZxQoeIQkVGNWxqaBtcxIk83UlXI4Saj3Gow1B/h5NfpXbOLYIcZYHt+zYFprwKCY1onzfRyEW458pUm/Dxvcfb/M83ZLMt9/Qs7+lZ3s/glmyP++AhsEzqUGGqGiGNcO9/vnlU+cDmbul7/c9p++iYR38vjEfTOM1WXdFWp8LeCqG7PKbY1SNlINIq+WmTLUn28XSjpe4W2+myaLu62c/nQIoZDz5NIDd3FdezHfizJNG6uJrX3lwD1Usrm7BVtumG03iWu9K6YxZnIqxb7Zzu2bf/AQAA//8DALFl8/7TPAAA
+    http_version: 
+  recorded_at: Mon, 19 Mar 2018 14:07:12 GMT
+recorded_with: VCR 4.0.0

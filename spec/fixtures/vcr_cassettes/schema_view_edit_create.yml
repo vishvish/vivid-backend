@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/auth/login
+    body:
+      encoding: UTF-8
+      string: '{"username":"admin","password":"admin"}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '39'
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIxNDY5Mzg1LCJleHAiOjE1MjUwNjkzODV9.PMtw72x6_WsYZnd2FyzY7LjzywR3pNoOXRPikEp3MfU;
+        Max-Age=3600000; Expires=Mon, 30 Apr 2018 06:23:05 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '214'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAABTN3QqCMBiA4fOuQryAaNoPdRap9VmbJTpdJ9GP1TczhQK3RfeeHb7wwvPpWZb9rsviaVszyy50OCjyOUYYrjnZ4WYR3k/L878hNUAYhtN+N5GzwzXPebNfwBiqlESeUKLyNatgRJMYqfSHTAYoEnCELJXIQNMkuAO2eMyCAchasQQU88SImhvpoEex6mDpEyrTlsnSRB6f9rf03U4cNT5kL7F/XpxAGzHZSKPb2G1YHeXxFku/cek1tXvfHwAAAP//AwCfhA1tzwAAAA==
+    http_version: 
+  recorded_at: Mon, 19 Mar 2018 14:23:05 GMT
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/schemas
+    body:
+      encoding: UTF-8
+      string: '{"uuid":null,"name":"NJTAURYI","creator":null,"created":null,"editor":null,"edited":null,"displayField":"","segmentField":null,"permissions":null,"fields":[],"urlFields":[],"description":"MyString","container":false}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.4.2p198
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIxNDY5Mzg1LCJleHAiOjE1MjUwNjkzODV9.PMtw72x6_WsYZnd2FyzY7LjzywR3pNoOXRPikEp3MfU
+      Content-Length:
+      - '216'
+      Host:
+      - localhost:8080
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - http://localhost:8080/api/v1/schemas/55911189ea524d81911189ea524d81ec
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - mesh.token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyVXVpZCI6ImU1ODYxYmEyNmI5MTRiMjE4NjFiYTI2YjkxYWIyMTFhIiwiaWF0IjoxNTIxNDY5Mzg1LCJleHAiOjE1MjUwNjkzODV9.PMtw72x6_WsYZnd2FyzY7LjzywR3pNoOXRPikEp3MfU;
+        Max-Age=3600000; Expires=Mon, 30 Apr 2018 06:23:05 GMT; Path=/
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '277'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKSQMU/DMBCF9/4KyzNFOTeukmwsSCCBEJQBEIMTX+EkN4nsGKmq+t+JbaCFIDEwvu/evXe63Ywx7j1pzirGpSwBoChRSZHrAr4rbPhJsDcW1dDZsLEb9XEAymIJtRLLuoS8FnBQalSg+OjfH0IwbYkMinm2mEO5grwSiyqTj6kKNf27KWT8WaTJ9UZtzwlNsibsrYnIBfbEntPpXTsoajHetVbGYcRvaB11bdyG0+wjF11jqR8+B1fbu8FS+5KmrdpgxNeXq7P724eLhNeTyh7thlyId0fPSD8MYLA+HjHCkekfyPd66tNocAJ7Xxtyr79E3qQJfmWH/8727wAAAP//AwCxMhIwQAIAAA==
+    http_version: 
+  recorded_at: Mon, 19 Mar 2018 14:23:05 GMT
+recorded_with: VCR 4.0.0
