@@ -20,7 +20,7 @@
         <td><%= schema.description %></td>
         <td><%= link_to 'Show', schema_path(schema.uuid) %></td>
         <td><%= link_to 'Edit', edit_schema_path(schema.uuid) %></td>
-        <td><%= link_to 'Destroy', schema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', schema_path(schema.uuid), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -2,8 +2,19 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @project.title %>
+  <%= @project.name %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+<% @all_schemas.each do |schema| %>
+  <p><%= schema['uuid'] %>|<%= schema['name'] %></p>
+  <% if @difference.include?(schema['uuid']) %>
+    <p>Unchecked</p>
+    <% else %>
+    <p>Checked</p>
+    <% end %>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_project_path(@project.uuid) %> |
 <%= link_to 'Back', projects_path %>

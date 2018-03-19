@@ -10,6 +10,10 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @project_schemas = @project.schemas.collect { |sch| { 'uuid' => sch.uuid, 'name' => sch.name } }
+    @all_schemas = Schema.all.collect { |sch| { 'uuid' => sch.uuid, 'name' => sch.name } }
+    @difference = @all_schemas - @project_schemas
+    @difference.collect! { |sc| sc["uuid"] }
   end
 
   # GET /projects/new
@@ -64,7 +68,7 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.find(params[:uuid])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

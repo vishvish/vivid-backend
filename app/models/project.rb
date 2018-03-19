@@ -42,6 +42,21 @@ class Project
     end
   end
 
+  def schemas
+    self.schema = { 'name' => 'folder', 'uuid' => Schema.get_root_folder.uuid }
+    begin
+      response = RestClient.get("#{ENV['MESH_HOSTNAME']}/#{self.name}/schemas", { content_type: :json, accept: :json, :Authorization => "Bearer #{MeshService.token}" })
+    rescue RestClient::NotFound => e
+      raise ProjectError, "Project not found"
+    rescue RestClient::Conflict => e
+      raise ProjectError, "Project name conflict"
+    rescue RestClient::BadRequest => e
+    else
+      list = JSON.parse(response.body)['data']
+      list.collect! { |schema| Schema.new(schema) }
+    end
+  end
+
   def edit
 
   end
