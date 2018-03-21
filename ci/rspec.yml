@@ -11,8 +11,5 @@ inputs:
 - name: vivid-backend-src
 
 run:
-  path: vivid-backend-src/bin/bundle
-  args:
-    - exec
-    - rspec
+  path: ./vivid-backend-src/ci/test.sh
 
