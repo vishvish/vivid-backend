@@ -8,8 +8,11 @@ image_resource:
     tag: '2.4'
 
 inputs:
-- name: vivid-backend
+- name: vivid-backend-src
 
 run:
-  path: rspec
+  path: vivid-backend-src/bin/bundle
+  args:
+    - exec
+    - rspec
 
