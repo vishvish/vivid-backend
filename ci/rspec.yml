@@ -10,6 +10,11 @@ image_resource:
 inputs:
 - name: vivid-backend-src
 
+params:
+  MESH_HOSTNAME: 'http://localhost:8080/api/v1'
+  MESH_USERNAME: 'admin'
+  MESH_PASSWORD: 'admin'
+
 run:
   path: ./vivid-backend-src/ci/test.sh
 
