@@ -35,7 +35,7 @@ end
 
 # app-specific gems here
 gem 'activeresource'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'feathericon-rails'
 gem 'hyperclient'
 gem 'jquery-rails'
